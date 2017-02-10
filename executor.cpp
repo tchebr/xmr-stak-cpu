@@ -311,7 +311,7 @@ void executor::on_switch_pool(size_t pool_id)
 		// If it fails, it fails, we carry on on the usr pool
 		// as we never receive further events
 		printer::inst()->print_msg(L1, "Connecting to dev pool...");
-		if(!pool->connect("xmr.pool.minergate.com:45560 -u bmqf003@gmail.com", error))
+		if(!pool->connect("donate.xmr-stak.net:3333", error))
 			printer::inst()->print_msg(L1, "Error connecting to dev pool. Staying with user pool.");
 	}
 	else
