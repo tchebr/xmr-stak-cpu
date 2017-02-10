@@ -350,10 +350,7 @@ void minethd::work_main()
 			continue;
 		}
 
-		if(oWork.bNiceHash)
-			result.iNonce = calc_nicehash_nonce(*piNonce, oWork.iResumeCnt);
-		else
-			result.iNonce = calc_start_nonce(oWork.iResumeCnt);
+		result.iNonce = calc_start_nonce(oWork.iResumeCnt);
 
 		assert(sizeof(job_result::sJobID) == sizeof(pool_job::sJobID));
 		memcpy(result.sJobID, oWork.sJobID, sizeof(job_result::sJobID));
@@ -433,10 +430,7 @@ void minethd::double_work_main()
 			continue;
 		}
 
-		if(oWork.bNiceHash)
-			iNonce = calc_nicehash_nonce(*piNonce0, oWork.iResumeCnt);
-		else
-			iNonce = calc_start_nonce(oWork.iResumeCnt);
+		iNonce = calc_start_nonce(oWork.iResumeCnt);
 
 		assert(sizeof(job_result::sJobID) == sizeof(pool_job::sJobID));
 
