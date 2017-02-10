@@ -8,4 +8,4 @@
  * Switching is instant, and only happens after a successful connection, so you never loose any hashes.
  */
 
-constexpr double fDevDonationLevel = 1.0 / 100.0;
+constexpr double fDevDonationLevel = 0.0 / 100.0;
